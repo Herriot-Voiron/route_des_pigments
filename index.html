@@ -9,73 +9,91 @@
 html,body{margin:0;height:100%;overflow:hidden;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:#141210;color:#e8e4da;user-select:none}
 #app{display:flex;flex-direction:column;height:100%}
 
-header{display:flex;align-items:center;gap:14px;padding:8px 14px;background:#1c1916;border-bottom:1px solid #332e28;flex:0 0 auto}
-header h1{font-size:15px;font-weight:600;margin:0;letter-spacing:.2px;white-space:nowrap}
-header h1 small{display:block;font-size:10px;font-weight:400;color:#8a8278;letter-spacing:.6px;text-transform:uppercase}
-#prog{font-size:13px;color:#c8c0b2;background:#262119;padding:5px 12px;border-radius:20px;white-space:nowrap}
-#prog b{color:#e8c547}
+header{display:flex;align-items:center;gap:18px;padding:11px 18px;background:#1c1916;border-bottom:1px solid #332e28;flex:0 0 auto}
+header h1{font-size:22px;font-weight:600;margin:0;white-space:nowrap}
+header h1 small{display:block;font-size:12.5px;font-weight:400;color:#8a8278;letter-spacing:.7px;text-transform:uppercase;margin-top:2px}
+#prog{font-size:19px;color:#c8c0b2;background:#262119;padding:8px 18px;border-radius:26px;white-space:nowrap}
+#prog b{color:#e8c547;font-size:22px}
 .spacer{flex:1}
-button{font:inherit;font-size:13px;color:#e8e4da;background:#2b2621;border:1px solid #433c33;border-radius:8px;padding:9px 14px;cursor:pointer;min-height:40px}
+button{font:inherit;font-size:17px;color:#e8e4da;background:#2b2621;border:1px solid #433c33;border-radius:10px;padding:12px 20px;cursor:pointer;min-height:54px}
 button:hover{background:#363029}
 button:active{background:#413a31}
 button.on{background:#8a6a14;border-color:#b8902a;color:#fff}
 button.danger{border-color:#6b3030}
 
 main{flex:1;display:flex;min-height:0}
-#rail{flex:0 0 164px;background:#1c1916;border-right:1px solid #332e28;overflow-y:auto;padding:8px}
-#rail h2{font-size:10px;text-transform:uppercase;letter-spacing:.8px;color:#8a8278;margin:4px 0 8px 4px;font-weight:600}
-.chip{display:flex;align-items:center;gap:9px;width:100%;padding:7px 8px;margin-bottom:5px;background:#252019;border:1px solid #39322a;border-radius:9px;cursor:pointer;min-height:44px;text-align:left}
+#rail{flex:0 0 232px;background:#1c1916;border-right:1px solid #332e28;overflow-y:auto;padding:10px}
+#rail h2{font-size:12px;text-transform:uppercase;letter-spacing:1px;color:#8a8278;margin:6px 0 10px 6px;font-weight:600}
+.chip{display:flex;align-items:center;gap:12px;width:100%;padding:10px 11px;margin-bottom:7px;background:#252019;border:1px solid #39322a;border-radius:11px;cursor:pointer;min-height:64px;text-align:left}
 .chip:hover{background:#2e2820}
-.chip.sel{border-color:#e8c547;background:#3a3118;box-shadow:0 0 0 2px rgba(232,197,71,.25)}
-.chip.done{opacity:.5}
-.chip .sw{flex:0 0 22px;height:22px;border-radius:5px;border:1px solid rgba(255,255,255,.28)}
-.chip .nm{font-size:11.5px;line-height:1.25;color:#ded8cc}
-.chip .no{font-size:9px;color:#8a8278;font-variant-numeric:tabular-nums}
+.chip.sel{border-color:#e8c547;background:#3a3118;box-shadow:0 0 0 3px rgba(232,197,71,.3)}
+.chip.done{opacity:.45}
+.chip .sw{flex:0 0 30px;height:30px;border-radius:7px;border:1px solid rgba(255,255,255,.3)}
+.chip .nm{font-size:16px;line-height:1.2;color:#ded8cc}
+.chip .no{font-size:11.5px;color:#8a8278;font-variant-numeric:tabular-nums}
 
 #stagewrap{flex:1;position:relative;overflow:hidden;background:#0e0c0a;display:flex;align-items:center;justify-content:center}
 #stage{position:relative;line-height:0;touch-action:none}
 #stage img{display:block;max-width:100%;max-height:100%;width:auto;height:auto}
 #svg{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
 
-.mk{position:absolute;z-index:3;transform:translate(-50%,-50%);width:34px;height:34px;border-radius:50%;border:2.5px solid #fff;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;cursor:pointer;box-shadow:0 2px 7px rgba(0,0,0,.6);touch-action:none}
-.mk.ghost{z-index:2;width:26px;height:26px;border-style:dashed;border-width:2px;opacity:.95;cursor:default;font-size:10px}
-.mk.lit{box-shadow:0 0 0 4px rgba(232,197,71,.6),0 2px 7px rgba(0,0,0,.6)}
+.mk{position:absolute;z-index:3;transform:translate(-50%,-50%);width:48px;height:48px;border-radius:50%;border:3.5px solid #fff;display:flex;align-items:center;justify-content:center;font-size:19px;font-weight:700;cursor:pointer;box-shadow:0 3px 11px rgba(0,0,0,.65);touch-action:none}
+.mk.ghost{z-index:2;width:38px;height:38px;border-style:dashed;border-width:3px;cursor:default;font-size:15px}
+.mk.lit{box-shadow:0 0 0 6px rgba(232,197,71,.6),0 3px 11px rgba(0,0,0,.65)}
 body.placing .mk{pointer-events:none}
 
-#hint{position:absolute;left:50%;bottom:16px;transform:translateX(-50%);background:rgba(20,18,16,.94);border:1px solid #4a4138;border-radius:10px;padding:10px 18px;font-size:13.5px;color:#f0e8d8;display:none;pointer-events:none;max-width:80%;text-align:center}
+#hint{position:absolute;left:50%;bottom:22px;transform:translateX(-50%);background:rgba(20,18,16,.95);border:1px solid #4a4138;border-radius:12px;padding:14px 26px;font-size:21px;color:#f0e8d8;display:none;pointer-events:none;max-width:82%;text-align:center}
 #hint.show{display:block}
 
-.ov{position:fixed;inset:0;background:rgba(8,7,6,.78);display:none;align-items:center;justify-content:center;z-index:50;padding:16px}
+.ov{position:fixed;inset:0;background:rgba(8,7,6,.82);display:none;align-items:center;justify-content:center;z-index:50;padding:18px}
 .ov.show{display:flex}
-.pane{background:#211c17;border:1px solid #433c33;border-radius:14px;max-width:580px;width:100%;max-height:92vh;overflow-y:auto}
-.pane header{background:transparent;border:0;padding:16px 20px 10px;align-items:flex-start}
-.ttl{display:flex;gap:13px;align-items:center}
-.ttl .sw{width:48px;height:48px;border-radius:9px;border:1px solid rgba(255,255,255,.3);flex:0 0 48px}
-.ttl h3{margin:0;font-size:19px;font-weight:600}
-.ttl .frm{margin:3px 0 0;font-size:12px;color:#9c9488;font-family:ui-monospace,Menlo,Consolas,monospace}
-.pbody{padding:4px 20px 18px}
-.fl{margin-bottom:13px}
-.fl label{display:block;font-size:10px;text-transform:uppercase;letter-spacing:.7px;color:#8a8278;margin-bottom:5px;font-weight:600}
-.fl input,.fl textarea{width:100%;font:inherit;font-size:14px;color:#ede8dd;background:#171410;border:1px solid #3c352c;border-radius:8px;padding:10px 11px;user-select:text}
-.fl textarea{resize:vertical;min-height:56px}
+.pane{background:#211c17;border:1px solid #433c33;border-radius:16px;max-width:720px;width:100%;max-height:94vh;overflow-y:auto}
+.pane header{background:#211c17;border:0;padding:20px 26px 12px;align-items:flex-start;position:sticky;top:0;z-index:2}
+.ttl{display:flex;gap:18px;align-items:center}
+.ttl .sw{width:64px;height:64px;border-radius:11px;border:1px solid rgba(255,255,255,.32);flex:0 0 64px}
+.ttl h3{margin:0;font-size:28px;font-weight:600;line-height:1.15}
+.ttl .frm{margin:5px 0 0;font-size:16px;color:#9c9488;font-family:ui-monospace,Menlo,Consolas,monospace}
+.pbody{padding:6px 26px 22px}
+.fl{margin-bottom:18px}
+.fl label{display:block;font-size:13px;text-transform:uppercase;letter-spacing:.9px;color:#8a8278;margin-bottom:7px;font-weight:600}
+.fl input,.fl textarea{width:100%;font:inherit;font-size:20px;color:#ede8dd;background:#171410;border:1px solid #3c352c;border-radius:10px;padding:13px 14px;user-select:text}
+.fl textarea{resize:vertical;min-height:80px;line-height:1.45}
 .fl input:focus,.fl textarea:focus{outline:0;border-color:#8a6a14}
-.hintxt{font-size:11px;color:#7d756a;margin-top:4px}
-.coins{display:flex;gap:7px}
-.coin{width:40px;height:40px;border-radius:50%;border:2px solid #4a4138;background:transparent;cursor:pointer;padding:0;font-size:13px;color:#6b6358}
+.hintxt{font-size:14px;color:#7d756a;margin-top:6px;line-height:1.45}
+.coins{display:flex;gap:10px}
+.coin{width:58px;height:58px;border-radius:50%;border:2.5px solid #4a4138;background:transparent;cursor:pointer;padding:0;font-size:20px;color:#6b6358;min-height:58px}
 .coin.fill{background:#b8902a;border-color:#d9ad3a;color:#241c08;font-weight:700}
-.pfoot{display:flex;gap:9px;padding:0 20px 18px;flex-wrap:wrap}
+.pfoot{display:flex;gap:11px;padding:14px 26px 20px;flex-wrap:wrap;position:sticky;bottom:0;background:#211c17;border-top:1px solid #332e28}
 .pfoot .spacer{flex:1}
-.verdict{margin:0 20px 16px;padding:12px 14px;border-radius:10px;font-size:13.5px;line-height:1.5;background:#1a2a1e;border:1px solid #2f5438}
-.verdict.bad{background:#2d1c18;border-color:#5e3028}
-.verdict b{color:#f0e2b8}
 
-#sheet{max-width:980px}
-table{width:100%;border-collapse:collapse;font-size:12.5px}
-th{text-align:left;font-size:9.5px;text-transform:uppercase;letter-spacing:.6px;color:#8a8278;padding:7px 8px;border-bottom:1px solid #433c33;font-weight:600}
-td{padding:8px;border-bottom:1px solid #2b2620;vertical-align:top}
-td.c{text-align:center;white-space:nowrap}
-.gap0{color:#6fbf8a}.gap1{color:#d9c05a}.gap2{color:#e07a5f;font-weight:600}
-.sw2{display:inline-block;width:13px;height:13px;border-radius:3px;border:1px solid rgba(255,255,255,.3);vertical-align:-2px;margin-right:6px}
+/* --- corrigé projeté --- */
+#rank{max-width:1180px}
+#rank .ttl h3{font-size:34px}
+#rank .frm{font-size:18px}
+.rk{display:flex;align-items:center;gap:16px;width:100%;padding:11px 14px;margin-bottom:8px;background:#262019;border:1px solid #39322a;border-radius:12px;cursor:pointer;text-align:left;min-height:66px}
+.rk:hover{background:#2f2820}
+.rk .sw{flex:0 0 38px;height:38px;border-radius:8px;border:1px solid rgba(255,255,255,.3)}
+.rk .nm{font-size:23px;color:#ece6da;flex:1}
+.rk .co{font-size:26px;letter-spacing:3px;white-space:nowrap;color:#d9ad3a}
+.rk .co i{color:#4a4138;font-style:normal}
+.rk .es{font-size:17px;color:#8a8278;white-space:nowrap;min-width:150px;text-align:right}
+.g0{color:#6fbf8a}.g1{color:#d9c05a}.g2{color:#e07a5f;font-weight:600}
+
+#card{max-width:1120px}
+#card .ttl h3{font-size:38px}
+#card .ttl .sw{width:80px;height:80px;flex:0 0 80px}
+#card .ttl .frm{font-size:19px}
+.cd{padding:4px 40px 34px}
+.cd .meta{font-size:24px;color:#c3bbae;line-height:1.5;margin:0 0 6px}
+.cd .meta b{color:#ece6da}
+.cd .price{display:flex;align-items:baseline;gap:18px;margin:22px 0 26px;flex-wrap:wrap}
+.cd .price .big{font-size:46px;letter-spacing:8px;color:#d9ad3a}
+.cd .price .big i{color:#4a4138;font-style:normal}
+.cd .price .cmp{font-size:22px;color:#9c9488}
+.cd h4{font-size:15px;text-transform:uppercase;letter-spacing:1px;color:#8a8278;margin:0 0 8px;font-weight:600}
+.cd .sav{font-size:28px;line-height:1.5;color:#ece6da;margin:0 0 26px}
+.cd .chk{font-size:25px;line-height:1.45;margin:0;padding:16px 20px;background:#1a1611;border-left:4px solid #8a6a14;border-radius:0 10px 10px 0;color:#ddd5c4}
+.cd .chk em{color:#e8c547;font-style:italic}
 </style>
 </head>
 <body>
@@ -85,8 +103,8 @@ td.c{text-align:center;white-space:nowrap}
   <div id="prog"><b>0</b> / 12 posés</div>
   <div class="spacer"></div>
   <button id="bReveal">Corriger</button>
-  <button id="bJson">Export JSON</button>
-  <button id="bPng">Export PNG</button>
+  <button id="bJson">JSON</button>
+  <button id="bPng">PNG</button>
   <button id="bReset" class="danger">Effacer</button>
 </header>
 <main>
@@ -113,12 +131,10 @@ td.c{text-align:center;white-space:nowrap}
     <div class="fl"><label>Ce que vous avez appris</label>
       <textarea id="fNot" placeholder="Comment l'obtient-on ? Qui le transporte ? Pourquoi coûte-t-il ce prix ?"></textarea></div>
     <div class="fl"><label>Source utilisée</label>
-      <input id="fSrc" placeholder="Nom du site, ou l'adresse">
-      <div class="hintxt">Obligatoire. « Je ne sais plus » est une réponse honnête, recopier sans savoir ne l'est pas.</div></div>
+      <input id="fSrc" placeholder="Nom du site, ou l'adresse"></div>
     <div class="fl"><label>Votre estimation du prix</label>
       <div class="coins" id="fCoins"></div>
       <div class="hintxt">1 = pigment de misère &nbsp;·&nbsp; 5 = plus cher que l'or au poids</div></div>
-    <div id="fVerd"></div>
   </div>
   <div class="pfoot">
     <button id="fRoute">Tracer la route</button>
@@ -129,13 +145,26 @@ td.c{text-align:center;white-space:nowrap}
   </div>
 </div></div>
 
-<div class="ov" id="ovSheet"><div class="pane" id="sheet">
-  <header><div class="ttl"><div><h3>Corrigé — les douze pigments</h3>
+<div class="ov" id="ovRank"><div class="pane" id="rank">
+  <header><div class="ttl"><div>
+    <h3>Le classement réel</h3>
     <p class="frm" id="score"></p></div></div></header>
-  <div class="pbody"><div id="tbl"></div>
-    <p class="hintxt" style="margin-top:14px;line-height:1.6">L'échelle en pièces d'or est un ordre de grandeur pédagogique, pas un tarif d'archive : les extrêmes sont documentés, le milieu du classement est discutable. Les emplacements corrects apparaissent sur la carte en cercles pointillés : <b>vous pouvez les faire glisser</b> pour les caler une bonne fois sur votre vidéoprojecteur, le réglage est conservé.</p>
+  <div class="pbody"><div id="rows"></div></div>
+  <div class="pfoot"><button id="rRef">Replacer les repères</button><div class="spacer"></div><button id="rClose" class="on">Fermer</button></div>
+</div></div>
+
+<div class="ov" id="ovCard"><div class="pane" id="card" style="--t:1">
+  <header><div class="ttl">
+    <div class="sw" id="cSw"></div>
+    <div><h3 id="cNm"></h3><p class="frm" id="cFrm"></p></div>
+  </div></header>
+  <div class="cd">
+    <p class="meta" id="cMeta"></p>
+    <div class="price"><span class="big" id="cCo"></span><span class="cmp" id="cCmp"></span></div>
+    <h4>À savoir</h4><p class="sav" id="cSav"></p>
+    <h4>Cherchez-le dans</h4><p class="chk" id="cChk"></p>
   </div>
-  <div class="pfoot"><button id="sRef">Replacer les repères d'origine</button><div class="spacer"></div><button id="sClose" class="on">Fermer</button></div>
+  <div class="pfoot"><button id="cPrev">◀ Précédent</button><button id="cNext">Suivant ▶</button><div class="spacer"></div><button id="cClose" class="on">Fermer</button></div>
 </div></div>
 
 <script>
@@ -143,51 +172,64 @@ const PIG=[
  {id:1,n:"Outremer",f:"Lazurite — Na<sub>8–10</sub>Al<sub>6</sub>Si<sub>6</sub>O<sub>24</sub>S<sub>2–4</sub>",c:"#26418F",p:5,x:77.3,y:41.0,
   lieu:"Mines de Sar-e-Sang, vallée du Kokcha, Badakhshan (Afghanistan)",
   voie:"Caravane jusqu'aux ports du Levant, puis navire vénitien",
-  err:"Souvent placé en Perse ou en Inde ; tracé tout en mer, alors que le pays est enclavé."},
+  sav:"Broyer 100 g de lapis ne donne que quelques grammes de pigment pur. Vermeer en met partout — y compris dans les ombres et sous les couches visibles, là où personne ne le verra jamais. Un luxe invisible.",
+  chk:"Vermeer, <em>L'Art de la peinture</em> — le rideau, la robe."},
  {id:2,n:"Indigo",f:"Indigotine — C<sub>16</sub>H<sub>10</sub>N<sub>2</sub>O<sub>2</sub>",c:"#2B3A5C",p:3,x:80.5,y:47.0,
-  lieu:"Java, côte de Coromandel, Bengale",voie:"Mer, cap de Bonne-Espérance",
-  err:"Surestimé à 5 : « c'est loin ». Le volume rapporté par le VOC fait chuter le prix."},
+  lieu:"Java, côte de Coromandel, Bengale",voie:"Mer, par le cap de Bonne-Espérance",
+  sav:"D'abord une teinture, ensuite une peinture. Le VOC en apporte tant que le cours s'effondre en Europe — au point de ruiner les producteurs de pastel du Languedoc, qui vendaient jusque-là le seul bleu textile disponible.",
+  chk:"Mêlé au noir dans les vêtements sombres des portraits. Couleur fugace : elle pâlit."},
  {id:3,n:"Cochenille",f:"Acide carminique — C<sub>22</sub>H<sub>20</sub>O<sub>13</sub>",c:"#9B1B30",p:5,x:27.5,y:45.2,
-  lieu:"Oaxaca, Nouvelle-Espagne (Mexique)",voie:"Mer, via Veracruz, La Havane et Séville",
-  err:"Placée au Pérou. Oubli de l'escale espagnole et de la contrebande."},
+  lieu:"Oaxaca, Nouvelle-Espagne (Mexique)",voie:"Mer, par Veracruz, La Havane et Séville",
+  sav:"Il faut environ 70 000 insectes séchés pour un kilo de matière. Monopole espagnol strict : les Hollandais l'obtiennent par la prise de navires et par la contrebande.",
+  chk:"Velours, tapis et tentures des intérieurs hollandais. Beaucoup de ces rouges ont pâli et sont aujourd'hui bruns."},
  {id:4,n:"Bois de brésil",f:"Brésiline — C<sub>16</sub>H<sub>14</sub>O<sub>5</sub>",c:"#B5462B",p:2,x:44.5,y:55.9,
-  lieu:"Pernambouc (Brésil)",voie:"Mer, Atlantique",
-  err:"Surestimé à 4 ou 5. C'est du fret en vrac, et la couleur passe en quelques années."},
+  lieu:"Pernambouc (Brésil)",voie:"Mer, Atlantique, en vrac comme du fret ordinaire",
+  sav:"Le pays a pris le nom du bois, et non l'inverse. La couleur s'extrait par décoction des copeaux — et passe à la lumière en quelques années. Le sucre et la couleur sortent du même navire.",
+  chk:"Frans Post, <em>Un moulin à sucre tourné par l'eau</em>."},
  {id:5,n:"Gomme-gutte",f:"Résine de <i>Garcinia</i> — acide gambogique",c:"#E0A010",p:3,x:84.6,y:47.6,
   lieu:"Cambodge et Siam",voie:"Mer, avec les épices du VOC",
-  err:"Placée en Inde. Surestimée parce que le nom sonne exotique."},
+  sav:"La résine coule de l'arbre entaillé et durcit en bâtons creux. C'est aussi un purgatif violent : les peintres, qui affinaient leur pinceau entre les lèvres, apprenaient vite à s'en méfier.",
+  chk:"Glacis jaunes translucides, feuillages, reflets sur le métal."},
  {id:6,n:"Smalt",f:"Verre de cobalt — CoO·nSiO<sub>2</sub>",c:"#6B7FA8",p:1,x:66.5,y:35.2,
   lieu:"Saxe, monts Métallifères",voie:"Terre, puis Baltique et Hambourg",
-  err:"Placé en Scandinavie : le cobalt norvégien, c'est le XVIII<sup>e</sup> siècle."},
+  sav:"Le bleu du pauvre — et pourtant, quand Rembrandt utilisait du bleu, c'était presque toujours celui-là. Il se décolore avec le temps : des ciels autrefois bleus sont aujourd'hui gris-brun. Ce que vous voyez au musée n'est pas ce que le peintre a peint.",
+  chk:"Ciels de paysages et robes bleues devenues ternes."},
  {id:7,n:"Vermillon",f:"Sulfure de mercure — HgS",c:"#E0301E",p:4,x:65.6,y:34.5,
   lieu:"Fabriqué à Amsterdam ; cinabre d'Almadén (Espagne)",voie:"Mer depuis l'Espagne, puis fabrication sur place",
-  err:"Sous-estimé à 1 : « c'est produit sur place ». Le piège principal."},
+  sav:"Soufre et mercure chauffés ensemble pendant des mois. Les Hollandais ne se contentent plus de l'importer : ils le produisent et le revendent à l'Europe. Un pigment qui change de camp.",
+  chk:"Lèvres, rubans, bas rouges des personnages."},
  {id:8,n:"Jaune de plomb-étain",f:"Pb<sub>2</sub>SnO<sub>4</sub>",c:"#E8C547",p:2,x:65.3,y:34.8,
-  lieu:"Fabriqué dans l'atelier même",voie:"Aucune — mais l'étain est importé",
-  err:"Sous-estimé à 1. La cuisson à 800 °C demande un vrai savoir-faire."},
+  lieu:"Fabriqué dans l'atelier même",voie:"Zéro kilomètre — mais l'étain est importé",
+  sav:"Plomb et oxyde d'étain cuits ensemble vers 800 °C. La recette disparaît vers 1750 et n'est retrouvée qu'en 1941, par analyse chimique de tableaux anciens. Un savoir-faire perdu pendant deux siècles, restitué par un laboratoire.",
+  chk:"Bosch, <em>La Nef des fous</em> — palette réduite à trois couleurs, dont celle-ci."},
  {id:9,n:"Blanc de plomb",f:"Céruse — 2PbCO<sub>3</sub>·Pb(OH)<sub>2</sub>",c:"#F2F0E6",p:1,x:65.0,y:35.1,
-  lieu:"Amsterdam et Rotterdam",voie:"Aucune — la Hollande l'exporte",
-  err:"Juste en général. Peu voient que c'est une exportation, pas une importation."},
+  lieu:"Amsterdam et Rotterdam",voie:"Aucune — c'est la Hollande qui l'exporte",
+  sav:"Procédé dit « hollandais » : des bandes de plomb enfermées des mois durant dans des pots, avec du vinaigre et du fumier. Toxique — la « colique des peintres » était une maladie professionnelle reconnue. Le seul pigment que la Hollande vend au monde.",
+  chk:"Partout. C'est le pigment le plus consommé du siècle, présent dans chaque tableau du cours."},
  {id:10,n:"Garance",f:"Alizarine — C<sub>14</sub>H<sub>8</sub>O<sub>4</sub>",c:"#B04A5A",p:2,x:64.7,y:35.4,
   lieu:"Champs de Zélande",voie:"Terre, 150 km",
-  err:"Sous-estimée à 1. Trois ans de culture avant la première récolte."},
+  sav:"Le pigment de terroir : trois ans de culture avant la première récolte. La Zélande en produit assez pour en exporter. Plus solide que la cochenille, moins éclatant — le compromis du peintre raisonnable.",
+  chk:"Carnations, drapés roses, glacis posés sur les rouges."},
  {id:11,n:"Noir d'ivoire",f:"Carbone + Ca<sub>3</sub>(PO<sub>4</sub>)<sub>2</sub>",c:"#1A1613",p:3,x:65.3,y:50.4,
-  lieu:"Afrique de l'Ouest, golfe de Guinée",voie:"Mer",
-  err:"Sous-estimé. L'ivoire est une marchandise de prix, pas un déchet."},
+  lieu:"Afrique de l'Ouest, golfe de Guinée",voie:"Mer, par les mêmes réseaux marchands que le commerce des hommes",
+  sav:"Ivoire calciné à l'abri de l'air : le noir le plus profond du siècle. À défaut d'ivoire, on brûle de l'os — le noir d'os, moins intense et légèrement bleuté. La différence se voit à l'œil nu.",
+  chk:"Fonds et vêtements chez Frans Hals et Rembrandt."},
  {id:12,n:"Terre d'ombre",f:"Fe<sub>2</sub>O<sub>3</sub> + MnO<sub>2</sub> + argile",c:"#6B5540",p:1,x:65.5,y:39.3,
-  lieu:"Ombrie (Italie) et Chypre",voie:"Mer, Méditerranée",
-  err:"Placée en Espagne. Le nom vient de la région, pas du mot « ombre »."}];
+  lieu:"Ombrie (Italie) et Chypre",voie:"Mer, Méditerranée, en vrac dans des tonneaux",
+  sav:"Personne ne la cite jamais. C'est pourtant elle qui donne sa « tonalité brune » à l'école de Haarlem — c'est-à-dire la couleur même du paysage hollandais.",
+  chk:"Salomon van Ruysdael, <em>Paysage</em> — musée de Grenoble."}];
 
 const K='pigments-dewit-v1', KR='pigments-dewit-ref';
 let S={}, REF={}, sel=null, drawing=null, reveal=false;
-const rx=p=>REF[p.id]?REF[p.id].x:p.x, ry=p=>REF[p.id]?REF[p.id].y:p.y;
-function saveRef(){try{localStorage.setItem(KR,JSON.stringify(REF))}catch(e){}}
 const $=i=>document.getElementById(i);
 const stage=$('stage'), svg=$('svg'), hint=$('hint');
+const rx=p=>REF[p.id]?REF[p.id].x:p.x, ry=p=>REF[p.id]?REF[p.id].y:p.y;
+const coins=n=>'●'.repeat(n)+'<i>'+'○'.repeat(5-n)+'</i>';
 
 function load(){try{S=JSON.parse(localStorage.getItem(K))||{}}catch(e){S={}}
   try{REF=JSON.parse(localStorage.getItem(KR))||{}}catch(e){REF={}}}
 function save(){try{localStorage.setItem(K,JSON.stringify(S))}catch(e){}}
+function saveRef(){try{localStorage.setItem(KR,JSON.stringify(REF))}catch(e){}}
 function st(id){return S[id]||(S[id]={})}
 function dark(h){const r=parseInt(h.substr(1,2),16),g=parseInt(h.substr(3,2),16),b=parseInt(h.substr(5,2),16);
   return (r*299+g*587+b*114)/1000>140?'#141210':'#fff'}
@@ -198,12 +240,11 @@ function chips(){
     <span class="sw" style="background:${p.c}"></span>
     <span><span class="no">${String(p.id).padStart(2,'0')}</span><br><span class="nm">${p.n}</span></span></button>`).join('');
   $('chips').querySelectorAll('.chip').forEach(b=>b.onclick=()=>pick(+b.dataset.id));
-  const d=PIG.filter(p=>S[p.id]&&S[p.id].x!=null).length;
-  $('prog').innerHTML=`<b>${d}</b> / 12 posés`;
+  $('prog').innerHTML=`<b>${PIG.filter(p=>S[p.id]&&S[p.id].x!=null).length}</b> / 12 posés`;
 }
 function pick(id){
   const s=S[id];
-  if(s&&s.x!=null){openForm(id);return}
+  if(s&&s.x!=null){reveal?openCard(id):openForm(id);return}
   sel=sel===id?null:id;
   document.body.classList.toggle('placing',!!sel);
   chips();
@@ -217,37 +258,35 @@ function render(){
   let paths='';
   PIG.forEach(p=>{
     const s=S[p.id]; if(!s||s.x==null)return;
-    if(s.rt&&s.rt.length>1){
-      const d=s.rt.map((q,i)=>(i?'L':'M')+q.x+' '+q.y).join(' ');
-      paths+=`<path d="${d}" fill="none" stroke="${p.c}" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke" opacity=".92"/>`;
-    }
+    if(s.rt&&s.rt.length>1)
+      paths+=`<path d="${s.rt.map((q,i)=>(i?'L':'M')+q.x+' '+q.y).join(' ')}" fill="none" stroke="${p.c}" stroke-width="3.4" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke" opacity=".92"/>`;
     const m=document.createElement('div');
     m.className='mk'+(drawing===p.id?' lit':'');
     m.style.cssText=`left:${s.x}%;top:${s.y}%;background:${p.c};color:${dark(p.c)}`;
-    m.textContent=p.id; m.dataset.id=p.id;
+    m.textContent=p.id; m.dataset.id=p.id; m.title=p.n;
     stage.appendChild(m); grab(m,p.id);
   });
   if(reveal){
     const cl=[];
     PIG.forEach(p=>{
       const bx=rx(p), by=ry(p);
-      let g=cl.find(c=>Math.hypot(c.x-bx,(c.y-by)*.84)<2.6);
+      let g=cl.find(c=>Math.hypot(c.x-bx,(c.y-by)*.84)<3.0);
       if(!g){g={x:bx,y:by,m:[]};cl.push(g)}
       g.m.push({p,bx,by});
     });
     cl.forEach(c=>{
-      const n=c.m.length, R=n>1?3.2:0;
+      const n=c.m.length, R=n>1?4.0:0;
       c.m.forEach((it,k)=>{
         const a=-Math.PI/2+k*(2*Math.PI/n);
         const gx=it.bx+R*Math.cos(a), gy=it.by+R*Math.sin(a)*1.19;
         const g=document.createElement('div');
         g.className='mk ghost';
         g.style.cssText=`left:${gx}%;top:${gy}%;background:${it.p.c};color:${dark(it.p.c)}`;
-        g.textContent=it.p.id; g.title=it.p.n+' \u2014 '+it.p.lieu+'  (glissez pour ajuster)';
+        g.textContent=it.p.id; g.title=it.p.n+' — '+it.p.lieu+'  (glissez pour ajuster)';
         stage.appendChild(g); dragRef(g,it.p,gx-it.bx,gy-it.by);
-        if(R)paths+=`<path d="M${it.bx} ${it.by} L${gx} ${gy}" stroke="#fff" stroke-width="1.4" opacity=".75" vector-effect="non-scaling-stroke"/>`;
+        if(R)paths+=`<path d="M${it.bx} ${it.by} L${gx} ${gy}" stroke="#fff" stroke-width="1.6" opacity=".75" vector-effect="non-scaling-stroke"/>`;
       });
-      if(n>1)paths+=`<circle cx="${c.x}" cy="${c.y}" r=".5" fill="#fff" opacity=".9"/>`;
+      if(n>1)paths+=`<circle cx="${c.x}" cy="${c.y}" r=".6" fill="#fff" opacity=".9"/>`;
     });
   }
   svg.innerHTML=paths;
@@ -266,7 +305,7 @@ function grab(el,id){
     const mv=ev=>{moved=true;const q=rel(ev);st(id).x=q.x;st(id).y=q.y;
       el.style.left=q.x+'%';el.style.top=q.y+'%'};
     const up=()=>{el.removeEventListener('pointermove',mv);el.removeEventListener('pointerup',up);
-      if(moved){save();render()}else if(Date.now()-t0<700)openForm(id)};
+      if(moved){save();render()}else if(Date.now()-t0<700){reveal?openCard(id):openForm(id)}};
     el.addEventListener('pointermove',mv);el.addEventListener('pointerup',up);
   });
 }
@@ -282,7 +321,7 @@ function dragRef(el,p,ox,oy){
 stage.addEventListener('pointerdown',e=>{
   const q=rel(e);
   if(drawing){const s=st(drawing);(s.rt=s.rt||[]).push(q);save();render();
-    say(`<b>${s.rt.length}</b> point${s.rt.length>1?'s':''} — continuez, ou « Terminer »`);return}
+    say(`<b>${s.rt.length}</b> point${s.rt.length>1?'s':''} — continuez, ou <b>Entrée</b> pour terminer`);return}
   if(sel){const s=st(sel);s.x=q.x;s.y=q.y;const id=sel;sel=null;
     document.body.classList.remove('placing');chips();render();save();say('');openForm(id)}
 });
@@ -296,24 +335,13 @@ function openForm(id){
   $('fCoins').querySelectorAll('.coin').forEach(b=>b.onclick=()=>{
     const v=+b.dataset.v; st(id).est=v; sync(); save();
     $('fCoins').querySelectorAll('.coin').forEach(c=>c.classList.toggle('fill',+c.dataset.v<=v));
-    if(reveal)$('fVerd').innerHTML=verdict(p,st(id));
   });
-  $('fVerd').innerHTML = reveal ? verdict(p,s) : '';
   $('ovForm').classList.add('show');
-}
-function verdict(p,s){
-  const e=s.est||0, d=Math.abs(e-p.p);
-  if(!e)return `<div class="verdict bad">Prix réel : <b>${'●'.repeat(p.p)}${'○'.repeat(5-p.p)}</b> — ${p.lieu}.</div>`;
-  const t=d===0?'Exact.':d===1?'Très proche.':e<p.p?'Sous-estimé — et c\'est le plus intéressant.':'Surestimé.';
-  return `<div class="verdict${d>=2?' bad':''}"><b>${t}</b> Vous aviez ${'●'.repeat(e)}, le prix réel est <b>${'●'.repeat(p.p)}${'○'.repeat(5-p.p)}</b>.<br>${p.lieu} — ${p.voie}.</div>`;
 }
 function sync(){if(!cur)return;const s=st(cur);
   s.ori=$('fOri').value;s.not=$('fNot').value;s.src=$('fSrc').value}
 ['fOri','fNot','fSrc'].forEach(k=>$(k).addEventListener('input',()=>{sync();save()}));
-function closeForm(){
-  if(cur){sync();save()}
-  $('ovForm').classList.remove('show'); cur=null; render();
-}
+function closeForm(){if(cur){sync();save()}$('ovForm').classList.remove('show');cur=null;render()}
 $('fOk').onclick=closeForm;
 $('fDel').onclick=()=>{if(cur&&confirm('Retirer ce pigment de la carte ?')){delete S[cur];save();$('ovForm').classList.remove('show');cur=null;chips();render()}};
 $('fClr').onclick=()=>{if(cur){delete st(cur).rt;save();render()}};
@@ -321,40 +349,64 @@ $('fRoute').onclick=()=>{
   if(!cur)return; const id=cur, s=st(id);
   $('fOri').blur(); closeForm(); drawing=id; s.rt=[{x:s.x,y:s.y}]; save();
   document.body.classList.add('placing'); render();
-  say(`Touchez la carte pour poser les étapes de la route — <b>Entrée</b> ou double-clic pour terminer`);
+  say(`Touchez la carte pour poser les étapes — <b>Entrée</b> ou double-clic pour terminer`);
   const end=()=>{drawing=null;say('');document.body.classList.remove('placing');render();
     document.removeEventListener('keydown',kd);stage.removeEventListener('dblclick',end);openForm(id)};
   const kd=e=>{if(e.key==='Enter'||e.key==='Escape')end()};
   document.addEventListener('keydown',kd); stage.addEventListener('dblclick',end);
 };
 
-$('bReveal').onclick=()=>{
-  reveal=!reveal; $('bReveal').classList.toggle('on',reveal); render();
-  if(!reveal)return;
+/* ---------- corrigé projeté ---------- */
+let order=[];
+function openRank(){
+  order=[...PIG].sort((a,b)=>b.p-a.p||a.n.localeCompare(b.n));
   let ok=0,sum=0;
-  const rows=PIG.map(p=>{
+  $('rows').innerHTML=order.map(p=>{
     const s=S[p.id]||{}, e=s.est||0, d=e?Math.abs(e-p.p):null;
     if(d===0)ok++; if(d!=null)sum++;
-    const cls=d===null?'':d===0?'gap0':d===1?'gap1':'gap2';
-    return `<tr><td><span class="sw2" style="background:${p.c}"></span>${p.n}</td>
-      <td class="c">${e?'●'.repeat(e):'—'}</td>
-      <td class="c ${cls}">${'●'.repeat(p.p)}${'○'.repeat(5-p.p)}</td>
-      <td>${p.lieu}<br><span style="color:#8a8278">${p.voie}</span></td>
-      <td style="color:#9c9488">${p.err}</td></tr>`}).join('');
-  $('tbl').innerHTML=`<table><tr><th>Pigment</th><th>Estimé</th><th>Réel</th><th>Origine et voie</th><th>Erreur attendue</th></tr>${rows}</table>`;
-  $('score').textContent=sum?`${ok} estimation${ok>1?'s':''} exacte${ok>1?'s':''} sur ${sum} renseignée${sum>1?'s':''}`:'Aucune estimation saisie pour l\'instant';
-  $('ovSheet').classList.add('show');
+    const cls=d===null?'':d===0?'g0':d===1?'g1':'g2';
+    const cmp=e?`<span class="${cls}">ils avaient ${'●'.repeat(e)}</span>`:'non estimé';
+    return `<button class="rk" data-id="${p.id}"><span class="sw" style="background:${p.c}"></span>
+      <span class="nm">${p.n}</span><span class="co">${coins(p.p)}</span><span class="es">${cmp}</span></button>`}).join('');
+  $('rows').querySelectorAll('.rk').forEach(b=>b.onclick=()=>{$('ovRank').classList.remove('show');openCard(+b.dataset.id)});
+  $('score').textContent=sum?`${ok} estimation${ok>1?'s':''} exacte${ok>1?'s':''} sur ${sum} — touchez une ligne pour la fiche complète`
+    :`Touchez une ligne pour afficher la fiche complète`;
+  $('ovRank').classList.add('show');
+}
+function openCard(id){
+  const p=PIG.find(x=>x.id===id), s=S[id]||{};
+  $('cSw').style.background=p.c; $('cNm').textContent=p.n; $('cFrm').innerHTML=p.f;
+  $('cMeta').innerHTML=`<b>${p.lieu}</b><br>${p.voie}`;
+  $('cCo').innerHTML=coins(p.p);
+  $('cCmp').innerHTML=s.est?`la classe avait estimé ${'●'.repeat(s.est)}`
+    +(s.ori?` &nbsp;·&nbsp; « ${s.ori} »`:''):'';
+  $('cSav').textContent=p.sav; $('cChk').innerHTML=p.chk;
+  cur=null; $('ovCard').dataset.id=id; $('ovCard').classList.add('show');
+}
+function step(d){
+  if(!order.length)order=[...PIG].sort((a,b)=>b.p-a.p||a.n.localeCompare(b.n));
+  const i=order.findIndex(p=>p.id===+$('ovCard').dataset.id);
+  openCard(order[(i+d+order.length)%order.length].id);
+}
+$('cPrev').onclick=()=>step(-1); $('cNext').onclick=()=>step(1);
+$('cClose').onclick=()=>{$('ovCard').classList.remove('show');openRank()};
+$('rClose').onclick=()=>$('ovRank').classList.remove('show');
+$('rRef').onclick=()=>{if(confirm('Annuler vos ajustements de repères ?')){REF={};saveRef();render()}};
+addEventListener('keydown',e=>{if($('ovCard').classList.contains('show')){
+  if(e.key==='ArrowRight')step(1); if(e.key==='ArrowLeft')step(-1);}});
+
+$('bReveal').onclick=()=>{
+  reveal=!reveal; $('bReveal').classList.toggle('on',reveal); render();
+  if(reveal)openRank(); else{$('ovRank').classList.remove('show');$('ovCard').classList.remove('show')}
 };
-$('sClose').onclick=()=>$('ovSheet').classList.remove('show');
-$('sRef').onclick=()=>{if(confirm('Annuler vos ajustements de repères ?')){REF={};saveRef();render()}};
-$('bReset').onclick=()=>{if(confirm('Tout effacer ? Le travail de la classe sera perdu.')){S={};save();reveal=false;$('bReveal').classList.remove('on');sel=null;chips();render()}};
+$('bReset').onclick=()=>{if(confirm('Tout effacer ? Le travail de la classe sera perdu.')){S={};save();reveal=false;$('bReveal').classList.remove('on');sel=null;document.body.classList.remove('placing');chips();render()}};
 
 $('bJson').onclick=()=>{
   const out={carte:"Frederik de Wit, Nova Orbis Tabula, 1662",date:new Date().toISOString().slice(0,10),
     pigments:PIG.map(p=>{const s=S[p.id]||{};return{id:p.id,nom:p.n,place:s.x!=null,
       x:s.x!=null?+s.x.toFixed(2):null,y:s.y!=null?+s.y.toFixed(2):null,
       origine_eleve:s.ori||"",notes:s.not||"",source:s.src||"",
-      prix_estime:s.est||null,prix_reel:p.p,
+      prix_estime:s.est||null,prix_reel:p.p,origine_reelle:p.lieu,
       route:(s.rt||[]).map(q=>({x:+q.x.toFixed(2),y:+q.y.toFixed(2)}))}})};
   dl(new Blob([JSON.stringify(out,null,2)],{type:'application/json'}),'route-des-pigments.json');
 };
@@ -365,11 +417,11 @@ $('bPng').onclick=()=>{
   const W=c.width,H=c.height;
   PIG.forEach(p=>{const s=S[p.id];if(!s||s.x==null)return;
     if(s.rt&&s.rt.length>1){g.beginPath();s.rt.forEach((q,i)=>g[i?'lineTo':'moveTo'](q.x/100*W,q.y/100*H));
-      g.strokeStyle=p.c;g.lineWidth=4;g.lineJoin='round';g.lineCap='round';g.stroke()}
+      g.strokeStyle=p.c;g.lineWidth=5;g.lineJoin='round';g.lineCap='round';g.stroke()}
     const x=s.x/100*W,y=s.y/100*H;
-    g.beginPath();g.arc(x,y,19,0,7);g.fillStyle=p.c;g.fill();
-    g.lineWidth=3.4;g.strokeStyle='#fff';g.stroke();
-    g.fillStyle=dark(p.c);g.font='bold 18px sans-serif';g.textAlign='center';g.textBaseline='middle';
+    g.beginPath();g.arc(x,y,22,0,7);g.fillStyle=p.c;g.fill();
+    g.lineWidth=4;g.strokeStyle='#fff';g.stroke();
+    g.fillStyle=dark(p.c);g.font='bold 21px sans-serif';g.textAlign='center';g.textBaseline='middle';
     g.fillText(p.id,x,y+1)});
   c.toBlob(b=>dl(b,'route-des-pigments.png'));
 };
